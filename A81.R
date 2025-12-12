@@ -8,4 +8,4 @@ if (ncol(student) == 1) {
 }
 
 cat("Rows:", nrow(student), "Cols:", ncol(student), "\n")
-print(names(student))
+print(names(student)
