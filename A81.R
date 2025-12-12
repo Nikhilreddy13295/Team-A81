@@ -25,3 +25,13 @@ ggplot(student, aes(x = sex, y = Walc, fill = sex)) +
     y = "Weekend Alcohol Consumption (Walc: 1–5)"
   ) +
   theme_minimal()
+
+ggplot(student, aes(x = Walc)) +
+  geom_histogram(binwidth = 1, boundary = 0.5) +
+  scale_x_continuous(breaks = 1:5) +
+  labs(
+    title = "Distribution of Weekend Alcohol Consumption (Walc)",
+    x = "Walc (1–5)",
+    y = "Frequency"
+  ) +
+  theme_minimal()
