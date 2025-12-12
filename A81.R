@@ -35,3 +35,14 @@ ggplot(student, aes(x = Walc)) +
     y = "Frequency"
   ) +
   theme_minimal()
+
+
+
+print(shapiro.test(student$Walc[student$sex == "Female"]))
+print(shapiro.test(student$Walc[student$sex == "Male"]))
+
+tt <- t.test(Walc ~ sex, data = student)   # Welch by default in R
+print(tt)
+
+mw <- wilcox.test(Walc ~ sex, data = student, exact = FALSE)
+print(mw)
